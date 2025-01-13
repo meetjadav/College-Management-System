@@ -1,18 +1,18 @@
 const adminDetails = require("./models/Admin/details.model.js");
 const adminCredential = require("./models/Admin/credential.model.js");
-const connectToMongo = require("./database/db.js");
+const connectToMongo = require("./Database/db.js");
 const mongoose = require("mongoose");
 
 const seedData = async () => {
     try {
         await connectToMongo();
 
-        await adminCredential.deleteMany({})
-        await adminDetails.deleteMany({})
+        await adminCredential.deleteMany({});
+        await adminDetails.deleteMany({});
 
         await adminCredential.create({
             loginid: 123456,
-            password: "admin123"
+            password: "admin123",
         });
 
         const adminDetail = {
