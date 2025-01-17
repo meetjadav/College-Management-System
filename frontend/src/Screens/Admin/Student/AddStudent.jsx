@@ -60,6 +60,7 @@ const AddStudent = () => {
     formData.append("middleName", data.middleName);
     formData.append("lastName", data.lastName);
     formData.append("email", data.email);
+    formData.append("email", data.parentEmail);
     formData.append("phoneNumber", data.phoneNumber);
     formData.append("semester", data.semester);
     formData.append("branch", data.branch);
@@ -90,6 +91,7 @@ const AddStudent = () => {
                   middleName: "",
                   lastName: "",
                   email: "",
+                  parentEmail: "",
                   phoneNumber: "",
                   semester: "",
                   branch: "",
@@ -176,6 +178,18 @@ const AddStudent = () => {
           type="email"
           id="email"
           value={data.email}
+          onChange={(e) => setData({ ...data, email: e.target.value })}
+          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        />
+      </div>
+      <div className="w-[40%]">
+        <label htmlFor="email" className="leading-7 text-sm ">
+          Enter  Parent Email Address
+        </label>
+        <input
+          type="email"
+          id="email"
+          value={data.parentEmail}
           onChange={(e) => setData({ ...data, email: e.target.value })}
           className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />

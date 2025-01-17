@@ -21,6 +21,10 @@ const studentDetails = new mongoose.Schema({
     type: String,
     required: true,
   },
+  parentEmail: {
+    type: String,
+    required: true,
+  },
   phoneNumber: {
     type: Number,
     required: true,

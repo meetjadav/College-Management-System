@@ -120,11 +120,13 @@ const Profile = () => {
               <p className="text-lg font-normal mb-2">
                 Email Address: {data.email}
               </p>
+              <p className="text-lg font-normal mb-2">
+                Parent Email Address: {data.parentEmail}
+              </p>
             </div>
             <button
-              className={`${
-                showPass ? "bg-red-100 text-red-600" : "bg-blue-600 text-white"
-              }  px-3 py-1 rounded mt-4`}
+              className={`${showPass ? "bg-red-100 text-red-600" : "bg-blue-600 text-white"
+                }  px-3 py-1 rounded mt-4`}
               onClick={() => setShowPass(!showPass)}
             >
               {!showPass ? "Change Password" : "Close Change Password"}

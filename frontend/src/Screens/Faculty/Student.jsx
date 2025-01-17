@@ -28,6 +28,7 @@ const Student = () => {
       middleName: "",
       lastName: "",
       email: "",
+      parentEmail: "",
       phoneNumber: "",
       semester: "",
       branch: "",
@@ -59,6 +60,7 @@ const Student = () => {
               middleName: response.data.user[0].middleName,
               lastName: response.data.user[0].lastName,
               email: response.data.user[0].email,
+              parentEmail: response.data.user[0].parentEmail,
               phoneNumber: response.data.user[0].phoneNumber,
               semester: response.data.user[0].semester,
               branch: response.data.user[0].branch,
@@ -115,6 +117,9 @@ const Student = () => {
                 </p>
                 <p className="text-lg font-normal mb-2">
                   Email Address: {data.email}
+                </p>
+                <p className="text-lg font-normal mb-2">
+                  parent Email Address: {data.parentEmail}
                 </p>
                 <p className="text-lg font-normal mb-2">
                   Branch: {data.branch}

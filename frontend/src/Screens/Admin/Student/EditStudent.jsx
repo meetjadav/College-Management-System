@@ -15,6 +15,7 @@ const EditStudent = () => {
     middleName: "",
     lastName: "",
     email: "",
+    parentEmail: "",
     phoneNumber: "",
     semester: "",
     branch: "",
@@ -116,6 +117,7 @@ const EditStudent = () => {
               middleName: response.data.user[0].middleName,
               lastName: response.data.user[0].lastName,
               email: response.data.user[0].email,
+              parentEmail: response.data.user[0].parentEmail,
               phoneNumber: response.data.user[0].phoneNumber,
               semester: response.data.user[0].semester,
               branch: response.data.user[0].branch,
@@ -147,6 +149,7 @@ const EditStudent = () => {
       middleName: "",
       lastName: "",
       email: "",
+      parentEmail: "",
       phoneNumber: "",
       semester: "",
       branch: "",
@@ -250,6 +253,18 @@ const EditStudent = () => {
             />
           </div>
           <div className="w-[40%]">
+            <label htmlFor="email" className="leading-7 text-sm ">
+              Enter parent Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={data.parentEmail}
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+              className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="w-[40%]">
             <label htmlFor="phoneNumber" className="leading-7 text-sm ">
               Enter Phone Number
             </label>
@@ -268,7 +283,6 @@ const EditStudent = () => {
               Semester
             </label>
             <select
-              disabled
               id="semester"
               className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
               value={data.semester}
@@ -290,7 +304,6 @@ const EditStudent = () => {
               Branch
             </label>
             <select
-              disabled
               id="branch"
               className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
               value={data.branch}
