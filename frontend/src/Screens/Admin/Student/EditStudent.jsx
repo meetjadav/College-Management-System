@@ -61,6 +61,7 @@ const EditStudent = () => {
     formData.append("middleName", data.middleName);
     formData.append("lastName", data.lastName);
     formData.append("email", data.email);
+    formData.append("parentEmail", data.parentEmail);
     formData.append("phoneNumber", data.phoneNumber);
     formData.append("semester", data.semester);
     formData.append("branch", data.branch);
